@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "mock:server": "json-server --watch mock/db.json --port 3000",
+    "start": "run-p mock:server \"ng serve\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --watch=false",
@@ -47,6 +48,7 @@
     "htmlhint": "^1.1.4",
     "husky": "^9.0.11",
     "jasmine-core": "~5.1.0",
+    "json-server": "^1.0.0-alpha.23",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
